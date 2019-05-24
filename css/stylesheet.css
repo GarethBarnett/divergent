@@ -1,0 +1,359 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  overflow: hidden !important;
+  position: relative;
+  background-color: #020106; }
+
+.subtext {
+  font-size: 13px;
+  font-weight: 500;
+  color: #808080; }
+
+@font-face {
+  font-family: Posterama;
+  src: url(../Posterama.ttf); }
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+.hide {
+  display: none; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+.floating {
+  animation: floating 9s linear infinite; }
+
+@keyframes floating {
+  10%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(0, 5px, 0); }
+  30%, 50% {
+    transform: translate3d(0, -5px, 0); }
+  40%, 60% {
+    transform: translate3d(10px, 0, 0); } }
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 0;
+  background-image: url("../img/background.jpg"); }
+
+#particles-js {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 0; }
+
+.hero {
+  position: absolute;
+  top: 17vw;
+  z-index: 2; }
+
+h1 {
+  font-size: 5.5vw;
+  font-weight: 900;
+  font-family: Posterama;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2.5vw; }
+
+.logo {
+  position: relative;
+  float: left;
+  z-index: 5;
+  margin-top: 60px;
+  width: 192px; }
+
+.logoMain {
+  font-family: Posterama;
+  font-weight: 900;
+  color: #ff244d;
+  font-size: 33px; }
+
+.logoSub {
+  font-weight: 500;
+  color: #fff;
+  font-size: 14px;
+  float: right;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 1.7vw;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-left: 54px; }
+
+h4 {
+  font-size: 1.5vw;
+  margin-top: 15px;
+  color: #ff244d;
+  font-weight: 500;
+  margin-left: 54px; }
+
+/*-----------------------Menu ------------------------*/
+.menu {
+  position: relative;
+  float: right;
+  margin-top: 45px; }
+
+#menu li {
+  display: inline-block;
+  margin: 10px;
+  margin-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px; }
+
+#menu li:hover {
+  background: rgba(255, 255, 255, 0.8); }
+
+#menu li a,
+#menu li.active a {
+  padding: 9px 18px;
+  display: block; }
+
+.contact {
+  border: 2px solid white; }
+
+.trigger {
+  position: relative;
+  z-index: 8;
+  margin: 0 auto;
+  top: 37vw;
+  width: 140px;
+  cursor: pointer; }
+  .trigger img {
+    width: 100%; }
+
+/*-----------MODAL START-----------*/
+.modal {
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem 1.5rem;
+  width: 90%;
+  height: 90%;
+  border-radius: 0.5rem;
+  text-align: center; }
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray; }
+
+.close-button:hover {
+  background-color: darkgray; }
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
+
+/*-----------MODAL END-----------*/
+.chart-container {
+  width: 90%;
+  height: 100%;
+  margin: auto; }
+
+.chart-container1 {
+  float: left;
+  width: 45%;
+  margin-top: 2%;
+  margin-bottom: 8%; }
+
+.chart-container2 {
+  float: right;
+  width: 45%;
+  margin-top: 2%;
+  margin-bottom: 8%; }
+
+.chart-container3 {
+  clear: both;
+  float: left;
+  width: 45%; }
+
+.chart-container4 {
+  float: right;
+  width: 45%; }
+
+.cTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700; }
+
+#chart1, #chart2, #chart3, #chart4 {
+  width: 100% !important;
+  max-width: 500px;
+  height: 100% !important;
+  text-align: center;
+  margin: 0 auto; }
+
+@media only screen and (max-width: 1150px) {
+  body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important; }
+
+  .chart-container1, .chart-container2, .chart-container3, .chart-container4 {
+    float: none;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 40px; }
+
+  .chart-container1 {
+    margin-top: 20px; }
+
+  /*-----------Hero-----------*/
+  .hero {
+    top: 230px; }
+
+  h1 {
+    font-size: 55px;
+    margin-left: 3px; }
+
+  h3 {
+    font-size: 21px;
+    margin-left: 30px; }
+
+  h4 {
+    font-size: 19px;
+    margin-left: 30px; }
+
+  /*-----------Hero-----------*/
+  .trigger {
+    top: 48vw; }
+
+  .modal-content {
+    margin-top: 350px;
+    height: auto;
+    margin-bottom: 60px; } }
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important; }
+
+  .container {
+    width: 90%; }
+
+  .chart-container1, .chart-container2, .chart-container3, .chart-container4 {
+    float: none;
+    width: 100%;
+    margin-top: 0px; }
+
+  .chart-container1 {
+    margin-top: 20px; }
+
+  .menu {
+    display: none; }
+
+  /*-----------Hero-----------*/
+  .hero {
+    top: 200px; }
+
+  h1 {
+    font-size: 33px;
+    margin-left: 3px; }
+
+  h3 {
+    font-size: 16px;
+    margin-left: 16px; }
+
+  h4 {
+    font-size: 16px;
+    margin-left: 16px; }
+
+  /*-----------Hero-----------*/
+  .trigger {
+    top: 320px; }
+
+  .modal-content {
+    margin-top: 165px;
+    height: auto;
+    margin-bottom: 60px; } }
+
+/*# sourceMappingURL=stylesheet.css.map */
